@@ -1,0 +1,16 @@
+{
+  "name": "blockchain-prototype",
+  "version": "1.0.0",
+  "description": "Block chain research",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-test": "nodemon dev-test"
+  },
+  "keywords": [],
+  "author": "Vaclav Stummer",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
