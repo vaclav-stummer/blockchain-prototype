@@ -4,7 +4,7 @@
   "description": "Block chain research",
   "main": "index.js",
   "scripts": {
-    "dev-test": "nodemon src/dev-test",
+    "dev": "nodemon src/index.js",
     "test:jest": "jest",
     "test:jest:watch": "jest --watch"
   },
