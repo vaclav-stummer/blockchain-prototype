@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev-test": "nodemon src/dev-test",
-    "test:jest": "jest"
+    "test:jest": "jest",
+    "test:jest:watch": "jest --watch"
   },
   "keywords": [],
   "author": "Vaclav Stummer",

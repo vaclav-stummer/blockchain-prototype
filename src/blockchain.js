@@ -13,6 +13,40 @@ class Blockchain {
 
     return block;
   }
+
+  isValidChain(chain) {
+    const isFirstBlockValid = JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis());
+
+    if (isFirstBlockValid) return false;
+
+    for (let i = 1; i < chain.length; i++) {
+      const block = chain[i];
+      const lastBlock = chain[i - 1];
+      const isHashValid =
+        block.lastHash !== lastBlock.hash || block.hash !== Block.blockHash(block);
+
+      if (isHashValid) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  replaceChain(newChain) {
+    if (newChain.length <= this.chain.length) {
+      console.warn("Received chain is not longer than the current chain.");
+
+      return;
+    } else if (!this.isValidChain(newChain)) {
+      console.warn("The received chain is not valid.");
+
+      return;
+    }
+
+    console.info("Replacing blockchain with the new chain.");
+    this.chain = newChain;
+  }
 }
 
 module.exports = Blockchain;
