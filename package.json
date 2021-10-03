@@ -4,7 +4,8 @@
   "description": "Block chain research",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/",
+    "start": "node src/",
     "test:jest": "jest",
     "test:jest:watch": "jest --watch"
   },
@@ -16,6 +17,7 @@
     "nodemon": "^2.0.13"
   },
   "dependencies": {
-    "crypto-js": "^4.1.1"
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.1"
   }
 }
