@@ -1,7 +1,7 @@
 const express = require("express");
 
 const Blockchain = require("./domains/blockchain/");
-const P2pServer = require('./p2p-server')
+const P2pServer = require("./p2p-server");
 
 const HTTP_PORT = process.env.HTTP_PORT || 4000;
 
@@ -24,6 +24,9 @@ app.post("/mine", (req, res) => {
   const block = blockchain.addBlock(req.body.data);
 
   console.info(`New block added: ${JSON.stringify(block)}`);
+
+  p2pServer.syncChains();
+
   res.redirect("/blocks");
 });
 
