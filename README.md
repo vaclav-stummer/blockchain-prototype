@@ -1,5 +1,7 @@
 # Blockchain Prototype
 
+Based on: https://www.udemy.com/course/build-blockchain/learn/lecture/9314190#content
+
 ## Test of the multiple running instances
 
 Open new terminal in the root of the project and run dev server with new and free ports e.g.:
