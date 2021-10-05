@@ -1,6 +1,6 @@
 const express = require("express");
 
-const Blockchain = require("./domains/blockchain/");
+const Blockchain = require("./blockchain");
 const P2pServer = require("./p2p-server");
 
 const HTTP_PORT = process.env.HTTP_PORT || 4000;
